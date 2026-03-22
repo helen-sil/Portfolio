@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Helen Sileshi Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="logo">Helen</div>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#services">Services</a>
+            <a href="#contact" class="contact-btn">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home -->
+   <section id="home" class="hero">
+    <div class="hero-img">
+        <img src="PF.pp.jpg" alt="profile">
+    </div>
+
+    <div class="hero-text">
+        <h1>Hi, I'm <span>Helen</span></h1>
+        <h2>A <span class="highlight">Computer Science Student</span></h2>
+        <p>I enjoy exploring technology, learning new skills, and applying them in different projects.</p>
+    </div>
+</section>
+
+    <!-- About -->
+    <section id="about" class="hero">
+    <div class="hero-text">
+        <h1>About <span>Me</span></h1>
+        <p>
+            Hello! I'm <strong>Helen Sileshi</strong>, a 3rd-year Computer Science student with a curiosity for technology and coding.
+        </p>
+        <p>
+            I enjoy learning new programming languages and building small projects using HTML, CSS, JavaScript, C++, and Java. 
+            My goal is to gradually improve my skills and create practical solutions through my projects.
+        </p>
+        <p>
+            Beyond coding, I like exploring creative ideas and thinking of ways technology can make everyday tasks easier and more enjoyable.
+        </p>
+    </div>
+</section>
+
+    <!-- Skills -->
+    <section id="skills" class="hero">
+    <div class="hero-text">
+        <h1>My <span>Skills</span></h1>
+        <ul>
+            <li>✔ Basic knowledge of HTML & CSS for web pages</li>
+            <li>✔ Basic knowledge of JavaScript for interactive web features</li>
+            <li>✔ Understanding of UI/UX principles</li>
+            <li>✔ Basic problem-solving and analytical skills</li>
+            <li>✔ Basic knowledge of C++ and Java for application development</li>
+        </ul>
+    </div>
+</section>
+
+    <!-- Projects -->
+    <section id="projects" class="hero">
+    <div class="hero-text">
+        <h1>My <span>Projects</span></h1>
+
+        <div class="projects">
+            <div class="card">
+                <h3>Portfolio Website</h3>
+                <p>A personal portfolio built using HTML & CSS.</p>
+            </div>
+
+            <div class="card">
+                <h3>Student Registration App</h3>
+                <p>A form app built using React Native.</p>
+            </div>
+
+            <div class="card">
+                <h3>Graphics Programs</h3>
+                <p>OpenGL mini projects and animations.</p>
+            </div>
+
+            <div class="card">
+                <h3>Online Learning System</h3>
+                <p>A system developed using C++ that manages courses, students, and learning materials.</p>
+            </div>
+
+            <div class="card">
+                <h3>Online Delivery System</h3>
+                <p>A Java-based application for managing orders, deliveries, and customer interactions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Services -->
+   <section id="services" class="hero">
+    <div class="hero-text">
+        <h1>My <span>Services</span></h1>
+        <ul>
+            <li>✔ Web Design – Creating simple and clean website layouts</li>
+            <li>✔ Frontend Development – Adding basic interactive features with HTML, CSS, and JavaScript</li>
+            <li>✔ UI Design – Designing simple user interfaces</li>
+            <li>✔ Application Development – Working on small projects in C++ and Java</li>
+        </ul>
+    </div>
+</section>
+
+    <!-- Contact -->
+    <section id="contact" class="hero">
+        <div class="hero-text">
+            <h1>Contact <span>Me</span></h1>
+            <form action="mailto:helensileshi81@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required><br>
+                <input type="email" name="email" placeholder="Your Email" required><br>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+            <div class="socials">
+            <p>Or reach me on:</p>
+            <p>Telegram: @hel_ennnn</p>
+            <p>Instagram: @helen.sileshi</p>
+        </div>
+        </div>
+    </section>
+
+    <div class="socials">
+    <p>Or connect with me:</p>
+    <a href="#">Telegram</a>
+    <a href="#">GitHub</a>
+    <a href="#">LinkedIn</a>
+</div>
+
+    <script>
+        // Highlight active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (pageYOffset >= sectionTop) current = section.getAttribute('id');
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
