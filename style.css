@@ -124,10 +124,10 @@ nav a.active {
 
 /* Projects */
 .projects {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 20px;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -135,7 +135,7 @@ nav a.active {
     background: rgba(54, 38, 26, 0.915);
     padding: 20px;
     border-radius: 15px;
-    width: 220px;
+    width: 300px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
 }
@@ -154,7 +154,7 @@ nav a.active {
 
 /* Contact Form */
 form input, form textarea {
-    width: 80%;
+    width: 100%;
     padding: 10px;
     border-radius: 10px;
     border: none;
@@ -176,25 +176,8 @@ form button:hover {
 }
 .socials p {
     margin: 5px 0;
-    color: #c7a17a;  
-    font-weight: bold;
-}
-
-/* Social links */
-.socials {
-    margin-top: 20px;
-}
-
-.socials a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #c7a17a;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.socials a:hover {
-    color: #ffffff;
+    color: #f3e8de;  
+   
 }
 
 /* Responsive */
